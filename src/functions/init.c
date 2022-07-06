@@ -26,12 +26,16 @@ void init() {
 	TIMSK2 = (1<<OCIE2A);
 	TCCR2B |= (1<<CS21);
 
-	DDRC = 0xFF;
+	DDRC = 0xFF;	//all pins as output
+	PORTC = 0x00;	//set the pins to low initially, prevent floating
+
 	DDRB = 0xFF;	//all pins as output
 	PORTB = 0x00;	//set the pins to low initially, prevent floating
+
 	DDRD = 0xFF;	//all pins as output
 	DDRD &= ~(1<<echoPin);	//echoPin is input
 	PORTD = 0x00;	//set pins to low
+
 	EIMSK |= (1<<INT0);		//interrupt INT0 enabled
 	EICRA |= (1<<ISC00); // interrupt on rising edge and falling edge
 

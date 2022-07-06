@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <avr/interrupt.h>
+#include <stdio.h>
 
 #define USART_BAUDRATE 9600 // Desired Baud Rate
 #define BAUD_PRESCALER (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
@@ -32,7 +33,15 @@
 #define trigPin 3
 #define echoPin 2
 
-#define tst_bit(y,bit) 	(y&(1<<bit))	//retorna 0 ou 1 conforme leitura do bit
+#define IN1 0
+#define IN2 1
+#define IN3 2
+#define IN4 3
+
+#define	set_bit(y,bit)	(y|=(1<<bit))
+#define	clr_bit(y,bit)	(y&=~(1<<bit))
+#define cpl_bit(y,bit) 	(y^=(1<<bit))
+#define tst_bit(y,bit) 	(y&(1<<bit))
 
 static volatile int pulseEnd = 0;
 static volatile int var = 0;
@@ -45,3 +54,8 @@ void write_measurement(char *str,int num);
 void delayFunction_Timer0(int a);
 void signalPulse();
 void fullInit();
+void startEngine(int value1, int value2);
+void turnRight();
+void turnLeft();
+void goForward();
+void stopEngine();
