@@ -57,3 +57,5 @@ void turnRight();
 void turnLeft();
 void goForward();
 void stopEngine();
+void goBackward();
+void fullStop();
