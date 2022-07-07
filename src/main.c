@@ -10,10 +10,11 @@ int main() {
 		// _delay_ms(500);
 		// write_measurement("PulseEnd", (pulseEnd*50)/58);
 
-		clr_bit(PORTC, IN1);
-	  	set_bit(PORTC, IN2);
-		// clr_bit(PORTC, IN3);
-	  	// set_bit(PORTC, IN4);
+		clr_bit(PORTC, IN2);
+	  	set_bit(PORTC, IN1);
+
+		clr_bit(PORTC, IN4);
+	  	set_bit(PORTC, IN3);
 
 		}
 	return 0;
