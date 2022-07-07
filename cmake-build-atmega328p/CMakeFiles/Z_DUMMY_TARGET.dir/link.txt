@@ -1,1 +1,0 @@
-/Users/lucasaguiar/.platformio/packages/toolchain-atmelavr/bin/avr-gcc -std=gnu11 -fno-fat-lto-objects -Os -Wall -ffunction-sections -fdata-sections -flto -mmcu=atmega328p CMakeFiles/Z_DUMMY_TARGET.dir/src/main.c.obj -o Z_DUMMY_TARGET 
