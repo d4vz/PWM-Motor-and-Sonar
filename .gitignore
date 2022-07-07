@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 
+*.dblite
+
 # Object files
 *.o
 *.ko
