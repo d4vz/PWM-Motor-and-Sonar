@@ -28,16 +28,26 @@ void stopEngine(int value1, int value2) {
 }
 
 void turnRight() {
-  startEngine(IN1, IN2);
-  startEngine(IN4, IN3);
+  startEngine(IN1, IN2); // left motor
+  startEngine(IN4, IN3); // right motor
 }
 
 void turnLeft() {
-  startEngine(IN2, IN1);
-  startEngine(IN3, IN4);
+  startEngine(IN2, IN1); // left motor
+  startEngine(IN3, IN4); // right motor
 }
 
 void goForward() {
-  startEngine(IN1, IN2);
-  startEngine(IN3, IN4);
+  startEngine(IN1, IN2); // left motor
+  startEngine(IN3, IN4); // right motor
+}
+
+void goBackward() {
+  startEngine(IN2, IN1); // left motor
+  startEngine(IN4, IN3); // right motor
+}
+
+void fullStop() {
+  stopEngine(IN1, IN2);
+  stopEngine(IN3, IN4);
 }
