@@ -1,4 +1,5 @@
 #include "helper.h"
+
 //TIMER
 void delayFunction_Timer0(int a) { //8 bit timer
 	OCR0A = a;	//counter limit
