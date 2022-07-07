@@ -1,27 +1,5 @@
 
-//#include "helper.h"
 #include "functions/helper.h"
-
-/*
-ESTADOS			IN1 IN2
-HORARIO 		 1 - 0
-ANTI-HORARIO	 0 - 1
-PONTO MORTO 	 0 - 0
-FREIO 		 	 1 - 1
-
-ESTADOS			IN4 IN3
-HORARIO 		 1 - 0
-ANTI-HORARIO	 0 - 1
-PONTO MORTO 	 0 - 0
-FREIO 		 	 1 - 1
-*/
-
-
-
-// [1,0,0,1]
-
-
-
 
 int main() {
 	fullInit();

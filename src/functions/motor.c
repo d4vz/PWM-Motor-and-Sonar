@@ -1,18 +1,21 @@
 #include "helper.h"
 
-//motor1
-// set_bit(PORTC, IN1);
-// clr_bit(PORTC, IN2);
+/*
+-> Motor Esquerdo <-
+ESTADOS		  	IN1 IN2
+HORARIO 		   1 - 0
+ANTI-HORARIO	 0 - 1
+PONTO MORTO 	 0 - 0
+FREIO 		 	   1 - 1
 
-// clr_bit(PORTC, IN1);
-// set_bit(PORTC, IN2);
+-> Motor direito <-
+ESTADOS			  IN4 IN3
+HORARIO 		   1 - 0
+ANTI-HORARIO	 0 - 1
+PONTO MORTO 	 0 - 0
+FREIO 		 	   1 - 1
+*/
 
-// //motor2
-// set_bit(PORTC, IN3);
-// clr_bit(PORTC, IN4);
-
-// clr_bit(PORTC, IN3);
-// set_bit(PORTC, IN4);
 
 void startEngine(int set, int clr) {
     set_bit(PORTC, set);
