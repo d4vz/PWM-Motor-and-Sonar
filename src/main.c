@@ -21,6 +21,7 @@ int main() {
 			_delay_ms(5000);
 			fullStop();
 			_delay_ms(10000);
+
 		}
 	}
 	return 0;
