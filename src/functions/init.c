@@ -1,12 +1,5 @@
 #include "helper.h"
 
-void fullInit() {
-  USART_Init();
-	init();
-	_delay_ms(50);
-	sei();
-}
-
 void USART_Init() {
 	// Set Baud Rate
 	UBRR0H = BAUD_PRESCALER >> 8;
@@ -39,4 +32,11 @@ void init() {
 	EIMSK |= (1<<INT0);		//interrupt INT0 enabled
 	EICRA |= (1<<ISC00); // interrupt on rising edge and falling edge
 
+}
+
+void fullInit() {
+    USART_Init();
+    init();
+    _delay_ms(50);
+    sei();
 }

@@ -46,8 +46,6 @@
 static volatile int pulseEnd = 0;
 static volatile int var = 0;
 
-void USART_Init();
-void init();
 void write_string(char *str);
 void write_int(int num);
 void write_measurement(char *str,int num);
@@ -59,3 +57,5 @@ void turnRight();
 void turnLeft();
 void goForward();
 void stopEngine();
+void goBackward();
+void fullStop();
