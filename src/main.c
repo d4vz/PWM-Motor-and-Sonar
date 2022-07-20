@@ -1,28 +1,23 @@
-
 #include "functions/helper.h"
 
 int main() {
 	fullInit();
-
+	int marker = true;
 	while (1){
 
-		// signalPulse();
-		// _delay_ms(500);
+		signalPulse();
+		_delay_ms(500);
 		// write_measurement("PulseEnd", (pulseEnd*50)/58);
-
-		// clr_bit(PORTC, IN1);
-	  	// set_bit(PORTC, IN2);
-		while (1) {
-			goForward();
-			_delay_ms(5000);
-			turnRight();
-			_delay_ms(5000);
-			turnLeft();
-			_delay_ms(5000);
-			fullStop();
-			_delay_ms(10000);
-
+		if(pulseEnd < 50 && marker) {
+			stop();
+			turnLeftCustom(1);
+			marker = false;
+		} else if(pulseEnd > 50 && !marker) {
+			stop();
+			turnRightCustom(1);
+			marker = true;
 		}
+		else { goForward(); }
 	}
 	return 0;
 }
