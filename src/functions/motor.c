@@ -51,3 +51,25 @@ void fullStop() {
   stopEngine(IN1, IN2);
   stopEngine(IN3, IN4);
 }
+
+void stop() {
+  	goBackward();
+		_delay_ms(500);
+		fullStop();
+}
+
+void turnRightCustom(int time) {
+  turnRight();
+  _delay_ms(3000 * time);
+  turnLeft();
+  _delay_ms(500);
+  fullStop();
+}
+
+void turnLeftCustom(int time) {
+  turnLeft();
+  _delay_ms(3000 * time);
+  turnRight();
+  _delay_ms(500);
+  fullStop();
+}

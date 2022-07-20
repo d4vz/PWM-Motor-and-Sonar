@@ -43,6 +43,9 @@
 #define cpl_bit(y,bit) 	(y^=(1<<bit))
 #define tst_bit(y,bit) 	(y&(1<<bit))
 
+#define true 1
+#define false 0
+
 static volatile int pulseEnd = 0;
 static volatile int var = 0;
 
@@ -59,3 +62,6 @@ void goForward();
 void stopEngine();
 void goBackward();
 void fullStop();
+void stop();
+void turnRightCustom(int num);
+void turnLeftCustom(int num);
