@@ -2,20 +2,14 @@
 
 int main() {
 	fullInit();
-	int marker = true;
 	while (1){
 
 		signalPulse();
+		int distance = (pulseEnd*50)/58;
 		_delay_ms(500);
-		// write_measurement("PulseEnd", (pulseEnd*50)/58);
-		if(pulseEnd < 50 && marker) {
-			stop();
+		write_measurement("Distance", distance);
+		if(distance < 60) {
 			turnLeftCustom(1);
-			marker = false;
-		} else if(pulseEnd > 50 && !marker) {
-			stop();
-			turnRightCustom(1);
-			marker = true;
 		}
 		else { goForward(); }
 	}

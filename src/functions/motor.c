@@ -33,12 +33,12 @@ void turnRight() {
 }
 
 void turnLeft() {
-  startEngine(IN2, IN1); // left motor
+  startEngine(IN1, IN2); // left motor
   startEngine(IN3, IN4); // right motor
 }
 
 void goForward() {
-  startEngine(IN1, IN2); // left motor
+  startEngine(IN2, IN1); // left motor
   startEngine(IN3, IN4); // right motor
 }
 
@@ -60,16 +60,16 @@ void stop() {
 
 void turnRightCustom(int time) {
   turnRight();
-  _delay_ms(3000 * time);
+  _delay_ms(300 * time);
   turnLeft();
-  _delay_ms(500);
+  _delay_ms(200);
   fullStop();
 }
 
 void turnLeftCustom(int time) {
   turnLeft();
-  _delay_ms(3000 * time);
+  _delay_ms(300 * time);
   turnRight();
-  _delay_ms(500);
+  _delay_ms(200);
   fullStop();
 }
